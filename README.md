@@ -10,8 +10,5 @@ Bandung Engineer of Automation Testing
 **Running**<br/>
 `go run main.go`
 
-**Server**<br/>
-`mpermperpisang.vm`
-
 **Contact**<br/>
 `mpermperpisang@gmail.com`

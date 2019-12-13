@@ -31,10 +31,8 @@ func getTokenGroup() {
 
 	if env == "local" {
 		token = os.Getenv("TOKEN_LOCAL")
-		group = os.Getenv("GROUP_LOCAL")
 	} else if env == "staging" {
 		token = os.Getenv("TOKEN_STAGING")
-		group = os.Getenv("GROUP_STAGING")
 	}
 }
 
@@ -48,7 +46,7 @@ func main() {
 	helper.ErrorMessage(err)
 
 	bot.Handle(telebot.OnText, func(m *telebot.Message) {
-		command.Main(bot, m, group)
+		command.Main(bot, m)
 	})
 
 	bot.Start()

@@ -30,7 +30,7 @@ func readMember() {
 }
 
 /*Main : Kumpulan command bot*/
-func Main(bot *telebot.Bot, m *telebot.Message, group string) {
+func Main(bot *telebot.Bot, m *telebot.Message) {
 	var contentMessage string
 
 	readMember()
