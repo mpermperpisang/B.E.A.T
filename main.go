@@ -26,7 +26,7 @@ func getEnv() string {
 	return env
 }
 
-func getTokenGroup() {
+func getToken() {
 	getEnv()
 
 	if env == "local" {
@@ -37,7 +37,7 @@ func getTokenGroup() {
 }
 
 func main() {
-	getTokenGroup()
+	getToken()
 
 	bot, err := telebot.NewBot(telebot.Settings{
 		Token:  token,

@@ -22,7 +22,6 @@ type BEAT struct {
 	} `yaml:"Members"`
 }
 
-/**/
 func readMember() {
 	reader, _ := os.Open("./data/beat.yml")
 	buf, _ := ioutil.ReadAll(reader)
