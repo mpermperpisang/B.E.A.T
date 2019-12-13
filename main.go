@@ -12,7 +12,7 @@ import (
 	"gopkg.in/tucnak/telebot.v2"
 )
 
-var env, token, group string
+var env, token string
 
 func init() {
 	if env := godotenv.Load(); env != nil {
