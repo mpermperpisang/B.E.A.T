@@ -47,5 +47,5 @@ func Main(bot *telebot.Bot, m *telebot.Message) {
 		contentMessage = beat.Members.TEM
 	}
 
-	bot.Reply(m, contentMessage, telebot.ModeHTML)
+	bot.Reply(m, contentMessage)
 }
