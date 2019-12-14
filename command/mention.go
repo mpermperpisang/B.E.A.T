@@ -28,8 +28,8 @@ func readMember() {
 	yaml.Unmarshal(buf, &beat)
 }
 
-/*Main : Kumpulan command bot*/
-func Main(bot *telebot.Bot, m *telebot.Message) {
+/*Mention : Fungsi untuk mention member BEAT*/
+func Mention(bot *telebot.Bot, m *telebot.Message) {
 	var contentMessage string
 
 	readMember()
