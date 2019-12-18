@@ -35,11 +35,11 @@ func Mention(bot *telebot.Bot, m *telebot.Message) {
 
 	readMember()
 
-	initial := "Dicariin nih, wankawan~~~ colek "
+	initial := "Dicariin nih, wankawan~~~ colek \n"
 
 	switch strings.ToUpper(m.Text) {
 	case "OI (A)TE":
-		contentMessage = initial + beat.Members.ATE + " " + beat.Members.TE
+		contentMessage = initial + beat.Members.ATE + beat.Members.TE
 	case "OI TE":
 		contentMessage = initial + beat.Members.TE
 	case "OI ATE":
@@ -49,8 +49,8 @@ func Mention(bot *telebot.Bot, m *telebot.Message) {
 	case "OI TEM":
 		contentMessage = initial + beat.Members.TEM
 	case "OI ALL":
-		contentMessage = initial + beat.Members.TEM + " " + beat.Members.ATA + " " + beat.Members.TE + " " + beat.Members.ATE
+		contentMessage = initial + beat.Members.TEM + " " + beat.Members.ATA + beat.Members.TE + beat.Members.ATE
 	}
 
-	bot.Reply(m, contentMessage)
+	bot.Reply(m, contentMessage, telebot.ModeHTML)
 }
