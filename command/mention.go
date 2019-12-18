@@ -49,7 +49,7 @@ func Mention(bot *telebot.Bot, m *telebot.Message) {
 	case "OI TEM":
 		contentMessage = initial + beat.Members.TEM
 	case "OI ALL":
-		contentMessage = initial + beat.Members.TEM + " " + beat.Members.ATA + beat.Members.TE + beat.Members.ATE
+		contentMessage = initial + beat.Members.TEM + beat.Members.ATA + beat.Members.TE + beat.Members.ATE
 	}
 
 	bot.Reply(m, contentMessage, telebot.ModeHTML)
