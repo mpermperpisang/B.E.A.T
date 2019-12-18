@@ -25,6 +25,7 @@ type BEAT struct {
 func readMember() {
 	reader, _ := os.Open("./data/beat.yml")
 	buf, _ := ioutil.ReadAll(reader)
+
 	yaml.Unmarshal(buf, &beat)
 }
 
@@ -34,17 +35,20 @@ func Mention(bot *telebot.Bot, m *telebot.Message) {
 
 	readMember()
 
+	contentMessage = "Dicariin nih, wankawan~~~ colek "
 	switch strings.ToUpper(m.Text) {
 	case "OI (A)TE":
-		contentMessage = beat.Members.ATE + " " + beat.Members.TE
+		contentMessage += beat.Members.ATE + " " + beat.Members.TE
 	case "OI TE":
-		contentMessage = beat.Members.TE
+		contentMessage += beat.Members.TE
 	case "OI ATE":
-		contentMessage = beat.Members.ATE
+		contentMessage += beat.Members.ATE
 	case "OI ATA":
-		contentMessage = beat.Members.ATA
+		contentMessage += beat.Members.ATA
 	case "OI TEM":
-		contentMessage = beat.Members.TEM
+		contentMessage += beat.Members.TEM
+	case "OI ALL":
+		contentMessage += beat.Members.TEM + " " + beat.Members.ATA + " " + beat.Members.TE + " " + beat.Members.ATE
 	}
 
 	bot.Reply(m, contentMessage)

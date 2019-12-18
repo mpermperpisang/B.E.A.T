@@ -27,8 +27,6 @@ func getEnv() string {
 }
 
 func getToken() {
-	getEnv()
-
 	if env == "local" {
 		token = os.Getenv("TOKEN_LOCAL")
 	} else if env == "staging" {
@@ -37,6 +35,7 @@ func getToken() {
 }
 
 func main() {
+	getEnv()
 	getToken()
 
 	bot, err := telebot.NewBot(telebot.Settings{
